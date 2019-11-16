@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>CRUD</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<div>
+<div th:replace="fragments/user_header :: user_header"></div>
+	
+</div>
+
+
+
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    
+    <h1 style="margin-left:75px;"><a href="#" class="w3-bar-item w3-button w3-padding-large">SAMPLE APPLICATION</a></h1>
+    
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px;margin-top:100px;" id="band">
+	<div class="container">
+
+		<table class="tableusr">
+			<caption>List of Users</caption>
+			<tr>
+				<th>Id</th>
+				<th>User Name</th>
+				<th>Password</th>
+				<th><button class="add">Add</button></th>
+			</tr>
+			<tr th:each="list: ${userlist}">
+				<td th:id="'id_'+${list.id}" class="data" th:text="${list.id}"></td>
+				<td th:id="'name_'+${list.id}" class="data" th:text="${list.name}"></td>
+				<td th:id="'password_'+${list.id}" class="data" th:text="${list.password}"></td>
+				<td><button th:id="'delete_'+${list.id}" class="del">Delete</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<div
+		th:replace="fragments/datatable_js :: datatable_js(@{/app/user.js})"></div>
+
+	<div class="myForm1" >
+		<form data-parsley-validate="" th:action="@{/new}"
+			th:object="${sdtmdto}" method="post">
+			<div class="modal fade" id="exampleModal1" tabindex="-1"
+				role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Register New
+								User</h5>
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="name" class="col-form-label">User Name</label> <input
+									type="text" class="form-control" id="name" name="name"
+									onkeydown="upperCaseF(this)" maxlength="20" required="" />
+								<script>
+												function upperCaseF(a){
+								 				   		setTimeout(function(){
+								        				a.value = a.value.toUpperCase();
+								    					}, 1);				  
+												}
+												</script>
+							</div>
+							<div class="form-group">
+								<label for="password" class="col-form-label">Password</label> <input
+									type="text" class="form-control" id="password"
+									name="password" value="" maxlength="40" required="" />
+							</div>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Close</button>
+							<input type="submit" class="btn btn-primary" value="save" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Gopalakrishnan</a></p>
+</footer>
+
+
+</body>
+<!-- </html> -->
+
+</html>
+

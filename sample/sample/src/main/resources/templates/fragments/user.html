@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+
+<div th:fragment="info-success" xmlns:th="http://www.thymeleaf.org"
+		th:remove="tag">
+		<div role="alert"
+			class="alert alert-success alert-icon alert-border-color alert-dismissible">
+			<div class="icon">
+				<span class="s7-check"></span>
+			</div>
+			<div class="message">
+				<strong>Good!</strong> You've successfully added client!
+			</div>
+		</div>
+	</div>
+	
+	<div th:fragment="info-edit" xmlns:th="http://www.thymeleaf.org"
+		th:remove="tag">You've successfully updated client information.</div>
+	<div th:fragment="info-deleted" xmlns:th="http://www.thymeleaf.org"
+		th:remove="tag">You've successfully deleted client information.</div>
+	
+
+</body>
+</html>

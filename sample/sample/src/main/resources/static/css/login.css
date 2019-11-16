@@ -1,0 +1,151 @@
+ p.Levist {
+    font-size: 30px;
+    color: #fff;
+    line-height: normal;
+    margin: auto;
+    font-family: 'Coiny',cursive;
+}
+body{
+	height: 100%;
+	font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    background: #fff;                        
+}
+
+
+
+.login-container .panel-default {
+    border-radius:10px;                     
+    background-color:white;
+    border: 1px solid #f1f1f1;
+}
+
+.login-container {
+    max-width: 500px;
+    position:relative;
+    top:85px;
+    }
+
+    .panel-body {
+    max-width: 400px;
+    margin: auto;
+}
+
+.login-container .panel-default .panel-body .form-group .input-group {
+   
+    padding: 10px 0;
+    width: 100%;
+    border-image-slice: 1;
+}
+
+
+
+span.heading {
+    font-size: 26px;
+    position: fixed;
+    color: white;
+    left: 322px;
+    top: 5px;
+
+}
+
+.login-container {
+    margin: 50px auto;
+}
+
+button.btn.btn-primary.btn-lg {
+    border-radius: 5px;
+
+}
+
+form.form-horizontal {
+    top: 10px;
+    position: relative;
+}
+.login-container .panel-default .panel-heading span {
+    font-weight: bold;
+    color: teal;
+    top: 20px;
+    left: -12px;
+    font-size: larger;
+    position: relative;
+  }
+
+  label {
+    color: #337ab7;
+}
+
+
+.login-container .panel-default .panel-body .form-group .remember .am-checkbox input[type="checkbox"] + label:hover:before, .login-container .panel-default .panel-body .form-group .remember .am-checkbox input[type="radio"] + label:hover:before {
+    border-color: #fff;
+}
+.login-container .panel-default .panel-body .form-group .remember .am-checkbox input[type="checkbox"] + label:before, .login-container .panel-default .panel-body .form-group .remember .am-checkbox input[type="radio"] + label:before {
+    border-color: #337ab7;
+    background-color: transparent;
+}
+
+.login-container .panel-default .panel-body .form-group .input-group .form-control {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 36px;
+}
+
+.am-checkbox input[type="checkbox"]:checked + label:before, .am-radio input[type="checkbox"]:checked + label:before, .am-checkbox input[type="radio"]:checked + label:before, .am-radio input[type="radio"]:checked + label:before {
+    content: "\e6cd";
+    
+   
+}
+
+.passwordfailure {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: initial;
+    font-stretch: condensed;
+    font-weight: 500;
+}
+
+.login-container .panel-default .panel-body .form-group.login-submit {
+    padding-top: 21px;
+    padding-bottom: 15px;
+}
+
+.copyrightfooter {
+    text-align: center;
+    font-size: medium;
+    background-color: teal;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.panel.panel-default {
+    position: relative;
+    top: 10px;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+button.btn.btn-primary.btn-lg:hover {
+    background-color: teal;
+    border-color:teal;
+}
+
+span.login {
+    position: relative;
+    bottom: 0px;
+    top:3px;
+}
+
+button.btn.btn-primary.btn-lg {
+    height: 50px;
+} 
+
+.main-content {
+    position: fixed;
+}
